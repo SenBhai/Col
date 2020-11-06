@@ -1,0 +1,77 @@
+body, html
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-align: center;
+	vertical-align: middle;
+    font-family: 'Roboto', sans-serif;
+	background-color:#101010;
+}
+
+img{max-width:100% !important;}
+.lti:hover{background-image: linear-gradient(to bottom, #101010, #CCCCCC);}
+.GBTxt{font-size:4vw;}
+
+#GIcon, #GITxt, .etpx
+{
+	height:4vw;
+	display:inline;
+}
+
+#GBlock
+{
+	top:45%;
+	left:30%;
+	position:fixed;
+}
+
+#ldf
+{
+	height:100vh;
+	width:100vw;
+	position:fixed;
+	top:0;
+	padding-top:30%;
+	left:0;
+	color:#EEE;
+	font-size:69px;
+	background-color: rgba(0,0,0,0.7);
+}
+
+#sign
+{
+	height:100vh;
+	width:100vw;
+	position:fixed;
+	top:0;
+	left:0;
+	background-image: linear-gradient(#101010, #CCCCCC);
+}
+
+#hed
+{
+	font-size:69px;
+	background-color:#BBFFBB;
+	color:#00AA00;
+	top:0;
+}
+
+.lti
+{
+	font-size:40px;
+	background-color:#CCCCFF;
+	width:25vw;
+	height:55vh !important;
+	overflow:hidden;
+	display:inline-block;
+	margin: 2.5vw 2.5vh 2.5vw 2.5vh;
+}
+
+.img
+{
+	height:85%;
+}
