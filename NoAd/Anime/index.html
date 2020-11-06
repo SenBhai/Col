@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!--
+	<one line to give the program's name and a brief idea of what it does.>
+    Copyright (C) <year>  <name of author>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Main COllection Page"/>
+<title>NoAd Maza</title>
+<link rel="shortcut icon" href="#"/>
+<link rel="stylesheet" href="anime.css?t=0"/>
+<script src="anime.js?t=0"></script>
+<script src="../../Scripts/General.js"></script>
+<script src="../../Scripts/ServerClient.js"></script>
+</head>
+
+<body onload="bdy()">
+
+<div id="hed" onclick="location.reload();">SenBhai</div>
+<BR/><BR/><BR/><BR/>
+<div id="lst" class="lst"></div>
+
+<div id="epD">
+	<div id="epL" class="fil" onclick="hid()"><H1>
+		<div id="nm" onclick="gebi('epD',2).display='none'">Monster Musume</div>
+		<div><small id="ep">(Episodes: 12)</small></div>
+		<BR/><BR/>
+		<div id="Sm"></div>
+		<BR/><BR/>
+		<div id="EP"><big><B>Episodes:-</B></big></div>
+		<div id="Ep">
+		</div>
+	</H1></div>
+	<div id="chs">
+		<H1 id="che"></H1>
+		<div id="qua">
+			<H2>Quality</H2>
+					<div class="but q" onclick="qu(this)">144p</div>
+					<div class="but q" onclick="qu(this)">240p</div>
+					<div class="but q" onclick="qu(this)">360p</div>
+					<div class="but q" onclick="qu(this)">480p</div>
+					<div class="but q" onclick="qu(this)">720p</div>
+					<div class="but q" onclick="qu(this)">1080p</div>
+		</div>
+		<div id="viw">
+			<H2><BR/>
+				<div class="but" onclick="hnd(0)">Play</div>
+				<div class="but" onclick="hnd(1)">Download</div>
+				<div id="lod">Loading...</div>
+			</H2>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
