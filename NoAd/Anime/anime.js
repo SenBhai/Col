@@ -82,7 +82,7 @@ function gto(a)
 async function ldq()
 {
 	var m=(await GetServer("https://cors-anywhere.herokuapp.com/"+lst[k][4].replace("category/","")+"-episode-"+E)).responseText
-	m=(await GetServer(m.substring(m.indexOf('ads"><a')+14,m.indexOf("ec-do")-33))).responseText
+	m=(await GetServer("https://cors-anywhere.herokuapp.com/"+m.substring(m.indexOf('ads"><a')+14,m.indexOf("ec-do")-33))).responseText
 	m=m.substring(m.indexOf('ad"><a')).replaceAll("\n","").replaceAll(" ","").replaceAll("amp;","")
 	m=m.substring(12,m.indexOf('iv><sp')-19).split('P-mp4)</a></div><divclass="dowload"><ahref="').map(x=>x.split('"download>Download('))
 	n=m.map(x=>Number(x[1]))
