@@ -26,8 +26,8 @@
 <title>NoAd Maza</title>
 <link rel="shortcut icon" href="#"/>
 <link rel="stylesheet" href="anime.css?t=0"/>
-<script src="anime.js?t=0"></script>
 <script src="../../Scripts/General.js"></script>
+<script src="anime.js?t=0"></script>
 <script src="../../Scripts/ServerClient.js"></script>
 </head>
 
@@ -35,12 +35,30 @@
 
 <div id="hed" onclick="location.reload();">SenBhai</div>
 <BR/><BR/><BR/><BR/>
-<div id="lst" class="lst"></div>
+
+<div id="pln">
+	<div>
+		<select id="ppc" class="ppc" title="#Per Page Count" onchange="bds()">
+			<option value="6">6</option>
+			<option value="9">9</option>
+			<option value="18">18</option>
+			<option value="30">30</option>
+			<option value="42">42</option>
+			<option value="60">60</option>
+		</select>
+		<input id="opa" class="slider" onchange="bld(this)" type="range" min="1" max="1" value="1" class="slider" title="Page Number"/>
+		<select id="cpn" class="rng" title="Anime Page" onchange="bld(this)">
+			<option value="1">1</option>
+		</select>
+	</div>
+	<BR/><BR/><BR/>
+	<div id="lst" class="lst"></div>
+</div>
 
 <div id="epD">
 	<div id="epL" class="fil" onclick="hid()"><H1>
-		<div id="nm" onclick="gebi('epD',2).display='none'">Monster Musume</div>
-		<div><small id="ep">(Episodes: 12)</small></div>
+		<div id="nm" onclick="gebi('epD',2).display='none'"></div>
+		<div><small id="ep"></small></div>
 		<BR/><BR/>
 		<div id="Sm"></div>
 		<BR/><BR/>
