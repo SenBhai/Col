@@ -33,7 +33,7 @@ async function qu(a)
 async function dat()
 {
 	if(localStorage.getItem("e")-0<(new Date()).getTime() || !localStorage.getItem("a"))
-		wn.location.href="http://localhost/SenBhai/NoAd/main/"
+		wn.location.href="https://senbhai.github.io/Col/NoAd/main/"
 	var a=localStorage.getItem("a").split("O:0").map(x=>x.replace("go/","https://gogoanime.so/category/")).sort(), i=0,tmp;
 	lst=[],l=a.length;
 	for(;i<l;++i)
