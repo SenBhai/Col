@@ -15,6 +15,7 @@ body, html
 img{max-width:100% !important;}
 .lti:hover{background-image: linear-gradient(to bottom, #101010, #CCCCCC);}
 .GBTxt{font-size:4vw;}
+::-webkit-scrollbar{display: none;}
 
 #GIcon, #GITxt, .etpx
 {
@@ -60,7 +61,7 @@ img{max-width:100% !important;}
 	top:0;
 }
 
-.lti
+/*.lti
 {
 	font-size:40px;
 	background-color:#CCCCFF;
@@ -69,9 +70,46 @@ img{max-width:100% !important;}
 	overflow:hidden;
 	display:inline-block;
 	margin: 2.5vw 2.5vh 2.5vw 2.5vh;
+}*/
+
+@media screen and (min-width: 360px)
+{
+	.lti
+	{
+		width:75vw;
+		height:45vh !important;
+	}
+}
+
+@media screen and (min-width: 480px)
+{
+	.lti
+	{
+		width:42vw;
+		height:55vh !important;
+	}
+}
+
+@media screen and (min-width: 720px)
+{
+	.lti
+	{
+		background-color:#CCCCFF;
+		width:25vw;
+		height:65vh !important;
+	}
+}
+
+.lti
+{
+	font-size:40px;
+	background-color:#CCCCFF;
+	display:inline-block;
+	margin: 2.5vw 2.5vh 2.5vw 2.5vh;
 }
 
 .img
 {
+	width:100% !important;
 	height:85%;
 }
