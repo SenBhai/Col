@@ -1,9 +1,13 @@
 dc = document
 wn = window
 
-var q=360, e="1", n="", Q=1, k, or=[144,240,360,480,720,1080], E;
+var q=360, e="1", n="", Q=1, k, or=[144,240,360,480,720,1080], E,tm,o;
 
-function bdy(){bild()}
+function bdy()
+{
+	tm=gebi("cpn");o=gebi("opa")
+	dat()
+}
 function hid(a){ gebi("chs",2).display="none" }
 
 function shw(a)
@@ -26,27 +30,43 @@ async function qu(a)
 	gebi("lod",2).display="";
 }
 
-async function bild()
+async function dat()
 {
-	var h=gebi("Ep",2);
-	h.display="none";
 	if(localStorage.getItem("e")-0<(new Date()).getTime() || !localStorage.getItem("a"))
 		wn.location.href="http://localhost/SenBhai/NoAd/main/"
-	var a=localStorage.getItem("a").split("O:0").map(x=>x.replace("go/","https://gogoanime.so/category/")).sort(), i=0;
-	ad="";
-	lst=[];
-	for(;i<a.length;++i)
+	var a=localStorage.getItem("a").split("O:0").map(x=>x.replace("go/","https://gogoanime.so/category/")).sort(), i=0,tmp;
+	lst=[],l=a.length;
+	for(;i<l;++i)
 	{
 		tx=(await GetServer(a[i])).responseText
 		nm=tx.substring(tx.indexOf("<title>")+7, tx.indexOf("</title>")-13)
 		im=tx.substring(tx.indexOf(':image" content="')+17, tx.indexOf(":image:s")-22)
 		ep=tx.substr(tx.indexOf('ve" e')+33, 11)
-		ep=ep.substring(ep.indexOf("-")+1,ep.indexOf("<"))
+		tmp=ep.indexOf("-")+1
+		ep=ep.substring(tmp?tmp:3,ep.indexOf("<"))
 		sm=tx.substring(tx.indexOf("ary: </sp")+5, tx.indexOf("n>Ge")-37)
 		lst.push([nm,im,ep,sm,a[i]])
-		ad+='<div class="lti" onclick="gto('+i+')"><img class="img" src="'+im+'"/><H2 class="nam">'+nm+'</H2>'+"<Br/><H3>Episodes : "+ep+'<BR/><B>Summary:-</B><BR/>'+sm+'</H3></div>'
 	}
-	gebi("lst").innerHTML+=ad
+	bld();
+}
+
+function bds(){o.value=tm.value=1;bld()}
+
+function bld(x=gebi('cpn'))
+{
+	x=x.value
+	var h=gebi("Ep",2),op="",ad="",ppr=parseInt(gebi("ppc").value);
+	var i=(x-1)*ppr,l=x*ppr;
+	l=lst.length<l?lst.length:l;
+	tm.innerHTML=""
+	h.display="none";
+	for(;i<l;++i)
+		ad+='<div class="lti" onclick="gto('+i+')"><img class="img" src="'+lst[i][1]+'"/><H2 class="nam">'+lst[i][0]+'</H2>'+"<Br/><H3>Episodes : "+lst[i][2]+'<BR/><B>Summary:-</B><BR/>'+lst[i][3]+'</H3></div>'
+	for(i=1,l=Math.ceil(lst.length/ppr)+1;i<l;++i)
+		tm.innerHTML+='<option value="'+i+'">'+i+'</option>'
+	gebi("lst").innerHTML=ad;
+	o.max=l-1;
+	o.value=tm.value=x;
 	h.display="";
 }
 
