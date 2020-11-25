@@ -46,7 +46,7 @@ async function lod()
 		try{tmp=(await sheet(shet[i], null, "A1:B1"))[0]}
 		catch{tmp=0}
 		lst.push(tmp);
-		shet[i]=tmp?(await sheet(shet[i],null,"B4:B"+(parseInt((await sheet(shet[i],null,"B2"))[0][0])+2))).map(x=>x[0]).join("O:0"):0;
+		shet[i]=tmp?(await sheet(shet[i],null,"B4:B"+(parseInt((await sheet(shet[i],null,"B2"))[0][0])+3))).map(x=>x[0]).join("O:0"):0;
 	}
 	var d=new Date();
 	d.setTime(d.getTime() + 2*24*60*60*1000);
