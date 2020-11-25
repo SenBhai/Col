@@ -19,6 +19,13 @@ body, html, #epD
 .inv{display:none;}
 ::-webkit-scrollbar{display: none;}
 #Sm:hover{ box-shadow:0 0 20px 0 #AAA; }
+input{ width:75vw; }
+select
+{
+	text-align-last:center;
+	width:10vw;
+	font-size:24px;
+}
 
 #Sm
 {
@@ -89,6 +96,42 @@ H3,#Sm, #EP
 	color:#EEE;
 }
 
+@media screen and (min-width: 360px)
+{
+	.lti
+	{
+		width:75vw;
+		height:45vh !important;
+	}
+}
+
+@media screen and (min-width: 480px)
+{
+	.lti
+	{
+		width:42vw;
+		height:55vh !important;
+	}
+}
+
+@media screen and (min-width: 720px)
+{
+	.lti
+	{
+		background-color:#CCCCFF;
+		width:25vw;
+		height:65vh !important;
+	}
+}
+
+.lti
+{
+	background-color:#CCCCFF;
+	overflow-y:scroll;
+	display:inline-block;
+	margin: 2.5vw 2.5vh 2.5vw 2.5vh;
+}
+
 .but, H2
 {
 	min-width:10vw;
@@ -97,19 +140,9 @@ H3,#Sm, #EP
 	display:inline-block;
 }
 
-.lti
-{
-	background-color:#CCCCFF;
-	width:25vw;
-	height:55vh !important;
-	overflow-y:scroll;
-	display:inline-block;
-	margin: 2.5vw 2.5vh 2.5vw 2.5vh;
-}
 
 .img
 {
-	max-width:100% !important;
+	width:100% !important;
 	height:85%;
 }
-
